@@ -1,0 +1,40 @@
+<!--@section -->
+<body class="fundo">
+    <header>
+        <h1 class="oculta">Clients | Plano de Ação</h1>     
+    </header>
+    <div class="bg-header">
+    </div>
+
+    <section class="login">
+        <div class="topo-login">
+            <h1 class="titulo-login">Listagem de Clientes</h1>
+        </div>
+        <div class="conteudo-login">
+            <div class="retorno">
+                <table class="table table-bordered">
+                    <thread>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Responsavel</th>
+                            <th>Email</th>
+                            <th>Telefone</th>
+                        </tr>
+                    </thread>
+                    <tbody>
+                        <tr ng-repeat="cliente in clients">
+                            <td>{{ cliente.name }}</td>
+                            <td>{{ cliente.responsable }}</td>
+                            <td>{{ cliente.email }}</td>
+                            <td>{{ cliente.phone }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+        </div>
+    </section>
+</body>
+<!--
+@endsection
+-->

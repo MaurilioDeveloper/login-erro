@@ -14,11 +14,11 @@
 Route::get('/', function () {
     return view('app');
 });
-//Route::post('oauth/access_token', function() {
-//    return Response::json(Authorizer::issueAccessToken());
-//});
+Route::post('oauth/access_token', function() {
+    return Response::json(Authorizer::issueAccessToken());
+});
 
-//Route::group(['middleware' => 'oauth'], function() {
+Route::group(['middleware' => 'oauth'], function() {
 
     //Com o uso do resources, ele irá pegar todos os nosso metodos principais
     //do nosso controller (ClientController), sem precisar digitar todas as rotas.
@@ -52,5 +52,5 @@ Route::get('/', function () {
       Route::put('project/{id}', 'ProjectController@update');
       Route::delete('project/{id}', 'ProjectController@destroy');
      */
-//});
+});
 
